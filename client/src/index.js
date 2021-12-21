@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import UserProvider from './providers/UserProvider';
+// import BlogProvider from './providers/BlogProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <UserProvider>
+      {/* <BlogProvider> */}
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      {/* </BlogProvider> */}
+    </UserProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
